@@ -60,6 +60,7 @@
                 <div class="container">
                     <input placeholder="Nume" type="text" name="username" id="username" required>
                     <input placeholder="Email" type="email" name="email" id="email" required>
+                    <input placeholder="An de studiu" type="text" name="anStudiu" id="anStudiu" required>
                 </div>
 
 
@@ -149,7 +150,7 @@
                 <select id="q11" name="q11name" required>
                     <option value="0">1</option>
                     <option value="1">2-3</option>
-                    <option value="2">>3</option>
+                    <option value="2">3+</option>
                 </select>
 
 
@@ -329,6 +330,7 @@
 
     let username = document.getElementById('username')
     let email = document.getElementById('email')
+    let anStudiu = document.getElementById('anStudiu')
 
     let q1 = document.getElementById("q1");
     let q2 = document.getElementById("q2");
@@ -608,6 +610,7 @@
             set(ref(db, 'StudentsSet/' + username.value), {
                 username: username.value,
                 email: email.value,
+                anStudiu: anStudiu.value,
                 lvlAlim: lvlAlim,
                 lvlSport: lvlSport,
                 q1: { answer: q1.options[q1.selectedIndex].text, value: q1.value },
