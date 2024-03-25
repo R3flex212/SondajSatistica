@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+
+</head>
+
+
+<style>
+    .container {
+        padding: 10px 10px;
+        text-align: center;
+    }
+
+    .header {
+        padding: 20px 10px 40px 10px;
+    }
+
+    label {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    h1,
+    h2 {
+        margin-top: 50px;
+    }
+
+
+    hr {
+        width: 50%;
+        margin: 0 auto;
+        height: 60px;
+        border-width: 4px;
+    }
+
+    .underline {
+        /* text-decoration: underline; */
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    button {
+        margin-top: 40px;
+    }
+</style>
+
+
+<body>
+    <div class="container">
+        <h1>Rezultate - <span id="nume">
+                <%= nume %>
+            </span>
+        </h1>
+    </div>
+
+    <div class="container">
+        <article id="alimentatieText">
+            <article aria-busy="true"></article>
+        </article>
+
+        <article id="sportText">
+            <article aria-busy="true"></article>
+        </article>
+    </div>
+
+    <div class="container">
+        <button onclick="alert(`Vom reveni in curand cu rezultate!`)">Vezi Rezultate Sondaj</button>
+    </div>
+
+    <div class="container">
+
+        <h1>Raspunsurile Tale:</h1>
+
+        <div class="container">
+            <h2>Alimentație</h2>
+            <hr>
+        </div>
+
+        <h3 id="q1">1.În ce măsură consumi fructe și legume:</h3>
+        <p>
+            Raspunsul tau: <%= q1 %>
+        </p>
+        <h3 id="q2">2.Cantitatea de apă pe care o consumi zilnic este:</h3>
+        <p>
+            Raspunsul tau: <%= q2 %>
+        </p>
+        <h3 id="q3">3.Ești atent la ingredientele produselor pe care le achiziționezi:</h3>
+        <p>
+            Raspunsul tau: <%= q3 %>
+        </p>
+        <h3 id="q4">4.Consumi produse din gama “bio”:</h3>
+        <p>
+            Raspunsul tau: <%= q4 %>
+        </p>
+        <h3 id="q5">5.De câte ori consumi fast-food pe săptămână:</h3>
+        <p>
+            Raspunsul tau: <%= q5 %>
+        </p>
+        <h3 id="q6">6.Cât de des consumi alimente bogate în proteine( pește, ouă, produse lactate, nuci și semințe):
+        </h3>
+        <p>
+            Raspunsul tau: <%= q6 %>
+        </p>
+        <h3 id="q7">7.În ce măsură eviți consumul excesiv de zahăr și dulciuri?</h3>
+        <p>
+            Raspunsul tau: <%= q7 %>
+        </p>
+        <h3 id="q8">8.Cât de des alegi opțiuni sănătoase în afara casei(la restaurant, ieșiri în oraș etc.)?</h3>
+        <p>
+            Raspunsul tau: <%= q8 %>
+        </p>
+        <h3 id="q9">9.Cât de inidmat te consideri în privința alimentației?</h3>
+        <p>
+            Raspunsul tau: <%= q9 %>
+        </p>
+        <h3 id="q10">10.Cât de mulțumit esti cu privire la starea ta generală si nivelul de energie în urma
+            regimului tău alimentar?</h3>
+        <p>
+            Raspunsul tau: <%= q10 %>
+        </p>
+        <h3 id="q11">11.Introduceți numărul de mese pe care le aveți într-o zi: </h3>
+        <p>
+            Raspunsul tau: <%= q11 %>
+        </p>
+
+
+
+        <div class="container">
+            <h2>Performanța Sportivă</h2>
+            <hr>
+        </div>
+
+
+        <h3 id="q12">1. Mergi la sala de fitness:</h3>
+        <p>
+            Raspunsul tau: <%= q12 %>
+        </p>
+        <h3 id="q13">2. Cât de des faci exerciții acasă?</h3>
+        <p>
+            Raspunsul tau: <%= q13 %>
+        </p>
+        <h3 id="q14">3. Practici vreun sport?</h3>
+        <p>
+            Raspunsul tau: <%= q14 %>
+        </p>
+        <h3 id="q15">4. Câți pași faci în medie într-o zi?</h3>
+        <p>
+            Raspunsul tau: <%= q15 %>
+        </p>
+        <h3 id="q16">5. În ce masură îți place să faci sport?</h3>
+        <p>
+            Raspunsul tau: <%= q16 %>
+        </p>
+        <h3 id="q17">6. Cât de variată este gama de exerciții pe care le practici?</h3>
+        <p>
+            Raspunsul tau: <%= q17 %>
+        </p>
+        <h3 id="q18">7. Cum te simți în ceea ce privește nivelul de fitness si starea de sănătate?</h3>
+        <p>
+            Raspunsul tau: <%= q18 %>
+        </p>
+
+
+
+        <div class="container">
+            <h2>Performanța Academică</h2>
+            <hr>
+        </div>
+
+
+        <h3 id="q19">1. Care este nivelul de concentrare pe care l-ai simțit în ultimele 6 luni?</h3>
+        <p>
+            Raspunsul tau: <%= q19 %>
+        </p>
+
+        <h3 id="q20">2. Cât de bine ai reușit să îți gestionezi timpul și să te organizezi pentru a
+            îndeplini cerințele academice ale cursurilor?</h3>
+        <p>
+            Raspunsul tau: <%= q20 %>
+        </p>
+        <h3 id="q21">3. Cât de bine ai reușit să menții un echilibru între viața academică și cea sportivă
+            în semestrul precedent?</h3>
+        <p>
+            Raspunsul tau: <%= q21 %>
+        </p>
+        <h3 id="q22">4. Cât de mult crezi că activitățile sportive au contribuit la bunăstarea și
+            concentrarea ta academică?</h3>
+        <p>
+            Raspunsul tau: <%= q22 %>
+        </p>
+        <h3 id="q23">5. Cât de mult crezi că obiceiurile alimentare au contribuit la bunăstarea și
+            concentrarea ta academică?</h3>
+        <p>
+            Raspunsul tau: <%= q23 %>
+        </p>
+        <h3 id="q24">6. Cât de bine ai reușit să îți gestionezi stresul și să îți menții sănătatea mentală
+            în timpul perioadelor solicitante din semestrul trecut?</h3>
+        <p>
+            Raspunsul tau: <%= q24 %>
+        </p>
+        <h3 id="q25">7. Cum apreciezi progresele tale în materie de cunoștințe și competențe academice în
+            ultimele luni?</h3>
+        <p>
+            Raspunsul tau: <%= q25 %>
+        </p>
+        <h3 id="q26">8. Cât de mulțumit ești de notele obținute în cadrul cursurilor sau examenelor
+            recente?</h3>
+        <p>
+            Raspunsul tau: <%= q26 %>
+        </p>
+        <h3 id="q27">9. Câte restanțe ai acumulat în cadrul semestrului anterior?</h3>
+        <p>
+            Raspunsul tau: <%= q27 %>
+        </p>
+        <h3 id="q28">10. Care a fost media generala a semestrului anterior?</h3>
+        <p>
+            Raspunsul tau: <%= q28 %>
+        </p>
+    </div>
+
+    <!-- <button id="buton">apasa</button> -->
+</body>
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+    const firebaseConfig = {
+        apiKey: "AIzaSyCSLkFUBTMTpsYhDdQnNmp_Z6fTuX-n-Pc",
+        authDomain: "statistica-37759.firebaseapp.com",
+        databaseURL: "https://statistica-37759-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "statistica-37759",
+        storageBucket: "statistica-37759.appspot.com",
+        messagingSenderId: "739551713354",
+        appId: "1:739551713354:web:206319389bea7efb70aeb3"
+    };
+    const app = initializeApp(firebaseConfig);
+    import { getDatabase, ref, child, get, set, update, remove } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"
+
+
+    const db = getDatabase();
+    let lastResponse;
+
+    const q1 = document.querySelector("#q1");
+
+    function getData() {
+        let nume = document.getElementById("nume").innerText
+        let alimentatieText = document.getElementById("alimentatieText")
+        let sportText = document.getElementById("sportText")
+        let lvlAlim = 0, lvlSport = 0;
+
+        const studentsRef = ref(db);
+        get(child(studentsRef, 'StudentsSet/' + nume)).then((snapshot) => {
+            if (snapshot.exists()) {
+
+                lvlAlim = snapshot.val().lvlAlim
+                lvlSport = snapshot.val().lvlSport
+
+                console.log(lvlAlim)
+                console.log(lvlSport)
+
+                if (lvlAlim <= 14) {
+                    alimentatieText.innerText = "Se pare ca nu esti foarte atent la alimentele pe care le consumi si ai un regim destul de nesanatos. Stim ca este mai usor sa ignori importanta unei alimentatii sanatoase, mai ales in timpul unor perioade aglomerate si stresante din viața de student. Insa, este necesar sa stii ca o alimentatie buna nu contribuie doar la aspect fizic si sanatate, ci si la performanta academica. Numeroase studii atesta ca un regim alimentar echilibrat, bogat in nutrienti si vitamine poate imbunatati considerabil concentrarea, memorarea si performanta generala in timpul studiilor. Iti recomandam: sa investesti mai mult timp in a-ti planifica mesele, sa fii atent la etichetele alimentelor pe care le consumi si sa le eviti pe cele bogate in E-uri, grasimi hidrogenate, zahar si indulcitori artificiali si sa incerci sa reduci consumul de fast food (chiar daca uneori stim ca e destul de tentant). "
+                } else if (lvlAlim > 14 && lvlAlim <= 26) {
+                    alimentatieText.innerText = "Se pare ca esti destul de  atent la alimentele pe care le consumi si ai un regim destul de sanatos. Poti incerca sa imbunatatesti acest aspect deoarece o alimentatie buna nu contribuie doar la aspect fizic si sanatate, ci si la performanta academica. Numeroase studii atesta ca un regim alimentar echilibrat, bogat in nutrienti si vitamine poate imbunatati considerabil concentrarea, memorarea si performanta generala in timpul studiilor. Iti recomandam: sa investesti mai mult timp in a-ti planifica mesele, sa fii atent la etichetele alimentelor pe care le consumi si sa le eviti pe cele bogate in E-uri, grasimi hidrogenate, zahar si indulcitori artificiali si sa incerci sa reduci consumul de fast food (chiar daca uneori stim ca e destul de tentant).       "
+                } else if (lvlAlim > 26) {
+                    alimentatieText.innerText = "Se pare ca esti foarte atent la alimentele pe care le consumi si ai un regim foarte sanatos.O alimentatie buna nu contribuie doar la aspect fizic si sanatate, ci si la performanta academica. Numeroase studii atesta ca un regim alimentar echilibrat, bogat in nutrienti si vitamine poate imbunatati considerabil concentrarea, memorarea si performanta generala in timpul studiilor. Asadar, tine-o tot asa caci acest lucru te va ajuta sa atingi succesul academic mult mai usor!!"
+                }
+
+                if (lvlSport <= 9) {
+                    sportText.innerText = "In ceea ce priveste sportul, nivelul tau de activitate fizica este redus.  E crucial sa intelegi ca exercitiile fizice regulate nu numai ca mentin sanatatea fizica, ci au si un impact semnificativ asupra performantei academice si a sanatatii mentale. Adesea, sportul este o modalitate excelenta prin care poti sa te eliberezi de stresul academic si sa-ti relaxezi mintea. Activitatea fizica poate reduce nivelul de stres si anxietate, imbunatatind starea generala de bine :D. Asadar, iti recomandam sa gasesti modalitati de a integra exercitiile fizice in rutina ta, in orice fel: mers pe jos, alergat, yoga, participare la sporturi de echipa si sa ramai consecvent!!"
+                } else if (lvlSport > 9 && lvlSport <= 18) {
+                    sportText.innerText = "In ceea ce priveste sportul, nivelul tau de activitate fizica este moderat. Este de apreciat ca iti dedici timpul si energia pentru a-ti mentine sanatatea si bunastarea prin miscare regulata, insa poti incerca sa o imbunatatesti.E important de stiut ca exercitiile fizice regulate nu numai ca mentin sanatatea fizica, ci au si un impact semnificativ asupra performantei academice si a sanatatii mentale. Adesea, sportul este o modalitate excelenta prin care poti sa te eliberezi de stresul academic si sa-ti relaxezi mintea. Activitatea fizica poate reduce nivelul de stres si anxietate, imbunatatind starea generala de bine :D. "
+                } else if (lvlSport > 18) {
+                    sportText.innerText = "Felicitari pentru dedicarea ta fata de activitatea fizica intensa! Implicarea ta in sport si eforturile tale de a-ti mentine sanatatea si bunastarea prin exercitii fizice sunt cu adevarat admirabile. Exercitiile fizice regulate nu numai ca mentin sanatatea fizica, ci au si un impact semnificativ asupra performantei academice si a sanatatii mentale. Asadar, continua sa iti urmaresti pasiunea pentru sport si sa te antrenezi  cu pasiune si determinare. Eforturile tale constante vor fi rasplatite cu sanatate, implinire personala si totodata performanta academica sporita!!"
+                }
+            }
+        })
+    }
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            console.log("Getting data!")
+            getData();
+        }, 4000);
+    })
+
+
+</script>
+
+</html>
