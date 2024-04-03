@@ -196,6 +196,11 @@ app.get("/", (req, res) => {
 app.get("/results", (req, res) => {
     res.sendFile(__dirname + "/results.html");
 });
+app.get("/rezultate", (req, res) => {
+    res.render("finalResults", {})
+});
+
+
 
 app.post("/", (req, res) => {
     const q1Value = req.body.q1name
